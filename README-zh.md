@@ -1,4 +1,7 @@
-## 文件下载服务
+# file-downloader
+
+[![Python](https://img.shields.io/badge/Python-3.14+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-GNU-green.svg)](LICENSE)
 
 一个零依赖、即开即用的轻量级静态文件下载服务。基于 Python 标准库 `http.server` + 多线程 `socketserver` 实现，默认从工作目录下的
 `data` 目录对外提供静态文件目录浏览与下载能力。
@@ -9,7 +12,7 @@
 
 ---
 
-### 特性
+## 特性
 
 - **零依赖**：不依赖第三方库，拉起即用。
 - **并发友好**：使用线程混入的 TCP 服务器，默认支持多请求同时下载。
@@ -18,7 +21,7 @@
 
 ---
 
-### 目录结构
+## 目录结构
 
 ```text
 ./
@@ -38,9 +41,9 @@
 
 ---
 
-### 快速开始
+## 快速开始
 
-#### 方式一：使用 uv（推荐）
+### 方式一：使用 uv（推荐）
 
 1) 安装 `uv`（参考官方文档安装，仅需一次）：`https://github.com/astral-sh/uv`
 
@@ -60,7 +63,7 @@ uv run main.py
 
 将待下载的文件放入 `data/` 目录，即可在页面中看到并下载。
 
-#### 方式二：直接用系统 Python 运行
+### 方式二：直接用系统 Python 运行
 
 ```bash
 python3 -V         # 确认版本 >= 3.14
@@ -68,7 +71,7 @@ mkdir -p data
 python3 main.py
 ```
 
-#### 方式三：Docker Compose
+### 方式三：Docker Compose
 
 项目已提供 `docker/docker-compose.yaml`：
 
@@ -81,7 +84,7 @@ docker compose up -d
 
 ---
 
-### 使用说明
+## 使用说明
 
 - **添加文件**：将文件放进 `data/`（Docker Compose 场景下为宿主机挂载目录）。
 - **浏览与下载**：打开 `http://localhost:8000/` 会显示目录列表，点击文件即可下载。
@@ -89,7 +92,7 @@ docker compose up -d
 
 ---
 
-### 配置与自定义
+## 配置与自定义
 
 当前默认端口为 `8000`。若需要修改端口，可在 `main.py` 中以参数形式传入：
 
@@ -106,7 +109,7 @@ if __name__ == "__main__":
 
 ---
 
-### 常见问题（FAQ）
+## 常见问题（FAQ）
 
 - **访问 404/空目录**：确认 `data/` 目录存在，且已放入文件。
 - **中文/特殊字符文件名**：浏览器直链下载时请确保 URL 已正确编码。
@@ -114,7 +117,7 @@ if __name__ == "__main__":
 
 ---
 
-### 许可证
+## 许可证
 
 本项目采用 `LICENSE` 中所述的许可证条款。
 
