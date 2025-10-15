@@ -2,11 +2,8 @@ __pycache__/
 build/
 dist/
 data/
+volumes/
 .idea/
 .vscode/
 .venv/
 .DS_Store
-certs/*
-logs/*
-!certs/.keep
-!logs/.keep

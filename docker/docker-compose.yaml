@@ -1,6 +1,6 @@
 services:
   file-downloader:
-    build: .
+    image: ghcr.io/xiaotiancai-tech/file-downloder:latest
     container_name: file-downloader
     restart: always
     networks:
@@ -8,7 +8,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./data:/app/data
+      - ./volumes:/app/data
 networks:
   file-downloader:
     driver: bridge
