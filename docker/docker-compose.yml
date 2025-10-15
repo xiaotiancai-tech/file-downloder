@@ -1,0 +1,14 @@
+services:
+  file-downloader:
+    build: .
+    container_name: file-downloader
+    restart: always
+    networks:
+      - file-downloader
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+networks:
+  file-downloader:
+    driver: bridge
