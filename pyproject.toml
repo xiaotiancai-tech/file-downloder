@@ -1,6 +1,6 @@
 [project]
 name = "file-downloder"
-version = "1.0.0"
+version = "1.0.1"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []
